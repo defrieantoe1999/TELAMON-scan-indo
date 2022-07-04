@@ -43,7 +43,7 @@ exmple: python3 telamon.py -sA google.com
   
   -sA, --scanall  Memindai status port di antara port yang telah di tentukan.
 
-# Disclaimer (sorumluluk reddi)
+# Disclaimer
 
 [En] People who use this tool are not our responsibility. Illegal actions are the sole responsibility of the user .Developers assume no liability and are not responsible for any misuse or damage caused by this program. If you use this tool, you accept automatic readme.md.
 
