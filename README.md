@@ -2,15 +2,15 @@
 
 [En] TELAMON is a basic port scanner.
 
-[Tr] TELAMON basit bir port scanner'dır.
+[ID] TALAMON adalah pemindai port sederhana.
 
-# Installation (kurulum)
+# Installation
 
-1) git clone https://github.com/astudios-tr/TELAMON.git
-2) cd TELAMON
+1) git clone https://github.com/defrieantoe1999/TELAMON-scan-indo.git
+2) cd TELAMON-scan-indo
 3) python3 telamon.py
 
-# Usage (kullanım)
+# Usage
 
 A) python3 telamon.py -s url
 
@@ -30,24 +30,24 @@ exmple: python3 telamon.py -sA google.com
 
 # Positional arguments:
 
-  target          ip yada website
+  target          ip 
 
 # Optional arguments:
-  -h, --help      Bu mesajı gösterir / yardım menüsünü gösterir
+  -h, --help Menampilkan pesan ini / menampilkan menu bantuan
   
-  -s, --scan      Sitenin / Ip nin belirtilen portun durumunu taratır
+   -s, --scan Memindai status situs / IP dari port yang ditentukan
   
-  -t, --test      sitenin açık mı kapalımı olduğuna bak
+   -t, --test Periksa apakah situs terbuka atau tertutup
   
-  -a, --all       sitenin tüm portlarını taratır
+   -a, --all memindai semua port situs
   
-  -sA, --scanall  belirtiğin portlar arasındaki portların dumunu taratır
+  -sA, --scanall  Memindai status port di antara port yang telah di tentukan.
 
 # Disclaimer (sorumluluk reddi)
 
 [En] People who use this tool are not our responsibility. Illegal actions are the sole responsibility of the user .Developers assume no liability and are not responsible for any misuse or damage caused by this program. If you use this tool, you accept automatic readme.md.
 
-[Tr] Bu aracı kullanan kişiler bizim sorumluluğumuzda değildir. Yasa dışı işlemler tamamen kullanıcının sorumluluğundadır. Geliştiriciler, bu programın neden olduğu herhangi bir yanlış kullanım veya hasardan hiçbir sorumluluk kabul etmez ve sorumlu değildir. Bu aracı kullanırsanız, otomatik readme.md'yi kabul etmiş olursunuz.
+[ID] Orang yang menggunakan alat ini bukan tanggung jawab kami. Tindakan ilegal sepenuhnya menjadi tanggung jawab pengguna. Pengembang tidak bertanggung jawab dan tidak bertanggung jawab atas penyalahgunaan atau kerusakan apa pun yang disebabkan oleh program ini. Jika Anda menggunakan alat ini, Anda setuju untuk membaca otomatis.md.
 
 
 
