@@ -62,11 +62,11 @@ print(f"""
 
 
 
-parser.add_argument("-s", "--scan", help='Sitenin / Ip nin belirtilen portun durumunu taratır', action="store_true" )
-parser.add_argument("-t", "--test", help='sitenin açık mı kapalımı olduğuna bak', action="store_true" )
-parser.add_argument("-a", "--all", help='sitenin tüm portlarını taratır', action="store_true" )
-parser.add_argument("-sA", "--scanall", help='belirtiğin portlar arasındaki portların dumunu taratır', action="store_true" )
-parser.add_argument("target", help='ip yada website', type=str)
+parser.add_argument("-s", "--scan", help='Memindai status situs / IP dari port tertentu', action="store_true" )
+parser.add_argument("-t", "--test", help='lihat apakah situs tersebut terbuka atau tertutup', action="store_true" )
+parser.add_argument("-a", "--all", help='memindai semua port dari situs', action="store_true" )
+parser.add_argument("-sA", "--scanall", help='Memindai status port antara port yang telah di tentukan', action="store_true" )
+parser.add_argument("target", help='ip atau situs web', type=str)
 args = parser.parse_args()
 
 
@@ -99,19 +99,19 @@ if args.all:
             
 |----------------------------------------------------------------|
 |                                                                |
-|  Site :  {Target}                                            
+|  Target IP/domain :  {Target}                                            
 |                                                                |
-|  Başlama Tarihi : {current_time}                                 
+|  dimualai pada : {current_time}                                 
 |                                                                |  
 |----------------------------------------------------------------|   
             """)
     for Port in range(1,6112):
         try:
             s.connect((Target , Port))
-            print("[+] Port AÇIK>> "+str(Port))
+            print("[+] Port Terbuka>> "+str(Port))
             
         except:
-            print("[-] Port KAPALI>> "+str(Port))
+            print("[-] Port tertutup>> "+str(Port))
 
 if args.test:
     print(f"""
@@ -133,9 +133,9 @@ if args.test:
             
 |----------------------------------------------------------------|
 |                                                                |
-|  Site :  {Target}                                            
+|  Target IP/domain :  {Target}                                            
 |                                                                |
-|  Başlama Tarihi : {current_time}                                 
+|  dimualai pada : {current_time}                                 
 |                                                                |  
 |----------------------------------------------------------------|   
             """)
@@ -165,9 +165,9 @@ if args.scan:
             
 |----------------------------------------------------------------|
 |                                                                |
-|  Site :  {Target}                                            
+|  Target IP/domain :  {Target}                                            
 |                                                                |
-|  Başlama Tarihi : {current_time}                                 
+|  dimualai pada : {current_time}                                 
 |                                                                |  
 |----------------------------------------------------------------|   
             """)
@@ -176,14 +176,14 @@ if args.scan:
 
     try:
         s.connect((Target , Port))
-        print("[+] Port AÇIK>> "+str(Port))
+        print("[+] Port Terbuka>> "+str(Port))
     except:
-        print("[-] Port KAPALI>> "+str(Port))
+        print("[-] Port Tertutup>> "+str(Port))
 
 if args.scanall:
 
-    min = int(input("En düşük port >"))
-    max = int(input("En büyük port >"))
+    min = int(input("port terkecil >"))
+    max = int(input("port max >"))
 
     print(f"""
             
@@ -205,9 +205,9 @@ if args.scanall:
             
 |----------------------------------------------------------------|
 |                                                                |
-|  Site :  {Target}                                            
+|  Target IP/domain :  {Target}                                            
 |                                                                |
-|  Başlama Tarihi : {current_time}                                 
+|  dimualai pada : {current_time}                                  
 |                                                                |  
 |----------------------------------------------------------------|   
             """)
@@ -215,7 +215,7 @@ if args.scanall:
     for Port in range(min, max + 1):
         try:
             s.connect((Target , Port))
-            print("[+] Port AÇIK>> "+str(Port))
+            print("[+] Port terbuka>> "+str(Port))
             
         except:
-            print("[-] Port KAPALI>> "+str(Port))
+            print("[-] Port Tertutup>> "+str(Port))
